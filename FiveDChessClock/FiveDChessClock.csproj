@@ -80,7 +80,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FiveDChessDataInterface\FiveDChessDataInterface\FiveDChessDataInterface.csproj">
+    <ProjectReference Include="..\FiveDChessDataInterface\FiveDChessDataInterface\FiveDChessDataInterface.csproj">
       <Project>{5c83e6cd-422e-43e3-895e-edfbfa1be092}</Project>
       <Name>FiveDChessDataInterface</Name>
     </ProjectReference>

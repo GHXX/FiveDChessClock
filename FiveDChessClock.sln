@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiveDChessClock", "FiveDChessClock\FiveDChessClock.csproj", "{3D586DDC-0227-40B7-B44E-050DEE17883D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiveDChessDataInterface", "..\FiveDChessDataInterface\FiveDChessDataInterface\FiveDChessDataInterface.csproj", "{5C83E6CD-422E-43E3-895E-EDFBFA1BE092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiveDChessDataInterface", "FiveDChessDataInterface\FiveDChessDataInterface\FiveDChessDataInterface.csproj", "{5C83E6CD-422E-43E3-895E-EDFBFA1BE092}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
