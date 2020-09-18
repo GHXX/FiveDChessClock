@@ -36,13 +36,14 @@
             this.LblTimeRemainingBlack = new System.Windows.Forms.Label();
             this.BtnSetTime = new System.Windows.Forms.Button();
             this.TmrUpdate = new System.Windows.Forms.Timer(this.components);
+            this.TmrDisplayUpdate = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // LblStaticHeader
             // 
             this.LblStaticHeader.AutoSize = true;
             this.LblStaticHeader.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStaticHeader.Location = new System.Drawing.Point(36, 9);
+            this.LblStaticHeader.Location = new System.Drawing.Point(65, 9);
             this.LblStaticHeader.Name = "LblStaticHeader";
             this.LblStaticHeader.Size = new System.Drawing.Size(325, 44);
             this.LblStaticHeader.TabIndex = 0;
@@ -74,9 +75,9 @@
             this.LblTimeRemainingWhite.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTimeRemainingWhite.Location = new System.Drawing.Point(151, 122);
             this.LblTimeRemainingWhite.Name = "LblTimeRemainingWhite";
-            this.LblTimeRemainingWhite.Size = new System.Drawing.Size(249, 44);
+            this.LblTimeRemainingWhite.Size = new System.Drawing.Size(298, 44);
             this.LblTimeRemainingWhite.TabIndex = 4;
-            this.LblTimeRemainingWhite.Text = "99h:99m:99s";
+            this.LblTimeRemainingWhite.Text = "00m:00s.000ms";
             // 
             // LblTimeRemainingBlack
             // 
@@ -84,15 +85,15 @@
             this.LblTimeRemainingBlack.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTimeRemainingBlack.Location = new System.Drawing.Point(151, 78);
             this.LblTimeRemainingBlack.Name = "LblTimeRemainingBlack";
-            this.LblTimeRemainingBlack.Size = new System.Drawing.Size(249, 44);
+            this.LblTimeRemainingBlack.Size = new System.Drawing.Size(298, 44);
             this.LblTimeRemainingBlack.TabIndex = 3;
-            this.LblTimeRemainingBlack.Text = "99h:99m:99s";
+            this.LblTimeRemainingBlack.Text = "00m:00s.000ms";
             // 
             // BtnSetTime
             // 
-            this.BtnSetTime.Location = new System.Drawing.Point(278, 181);
+            this.BtnSetTime.Location = new System.Drawing.Point(367, 177);
             this.BtnSetTime.Name = "BtnSetTime";
-            this.BtnSetTime.Size = new System.Drawing.Size(112, 41);
+            this.BtnSetTime.Size = new System.Drawing.Size(75, 23);
             this.BtnSetTime.TabIndex = 5;
             this.BtnSetTime.Text = "Set Time...";
             this.BtnSetTime.UseVisualStyleBackColor = true;
@@ -102,11 +103,16 @@
             // 
             this.TmrUpdate.Tick += new System.EventHandler(this.TmrUpdate_Tick);
             // 
+            // TmrDisplayUpdate
+            // 
+            this.TmrDisplayUpdate.Interval = 50;
+            this.TmrDisplayUpdate.Tick += new System.EventHandler(this.TmrDisplayUpdate_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 234);
+            this.ClientSize = new System.Drawing.Size(454, 212);
             this.Controls.Add(this.BtnSetTime);
             this.Controls.Add(this.LblTimeRemainingWhite);
             this.Controls.Add(this.LblTimeRemainingBlack);
@@ -116,7 +122,8 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.ShowIcon = false;
-            this.Text = "MainForm";
+            this.Text = "5D Chess Clock";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,6 +139,7 @@
         private System.Windows.Forms.Label LblTimeRemainingBlack;
         private System.Windows.Forms.Button BtnSetTime;
         private System.Windows.Forms.Timer TmrUpdate;
+        private System.Windows.Forms.Timer TmrDisplayUpdate;
     }
 }
 

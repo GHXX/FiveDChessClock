@@ -14,6 +14,8 @@ namespace FiveDChessClock
         [STAThread]
         static void Main()
         {
+            Console.Title = "5D Chess Clock";
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
