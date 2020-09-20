@@ -45,15 +45,15 @@
             this.LblStaticHeader.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblStaticHeader.Location = new System.Drawing.Point(65, 9);
             this.LblStaticHeader.Name = "LblStaticHeader";
-            this.LblStaticHeader.Size = new System.Drawing.Size(325, 44);
+            this.LblStaticHeader.Size = new System.Drawing.Size(303, 44);
             this.LblStaticHeader.TabIndex = 0;
-            this.LblStaticHeader.Text = "5D Chess - Clock";
+            this.LblStaticHeader.Text = "5D Chess Clock";
             // 
             // LblStaticBlack
             // 
             this.LblStaticBlack.AutoSize = true;
             this.LblStaticBlack.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStaticBlack.Location = new System.Drawing.Point(12, 78);
+            this.LblStaticBlack.Location = new System.Drawing.Point(12, 122);
             this.LblStaticBlack.Name = "LblStaticBlack";
             this.LblStaticBlack.Size = new System.Drawing.Size(133, 44);
             this.LblStaticBlack.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.LblStaticWhite.AutoSize = true;
             this.LblStaticWhite.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStaticWhite.Location = new System.Drawing.Point(12, 122);
+            this.LblStaticWhite.Location = new System.Drawing.Point(12, 78);
             this.LblStaticWhite.Name = "LblStaticWhite";
             this.LblStaticWhite.Size = new System.Drawing.Size(134, 44);
             this.LblStaticWhite.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             this.LblTimeRemainingWhite.AutoSize = true;
             this.LblTimeRemainingWhite.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTimeRemainingWhite.Location = new System.Drawing.Point(151, 122);
+            this.LblTimeRemainingWhite.Location = new System.Drawing.Point(151, 78);
             this.LblTimeRemainingWhite.Name = "LblTimeRemainingWhite";
             this.LblTimeRemainingWhite.Size = new System.Drawing.Size(298, 44);
             this.LblTimeRemainingWhite.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             this.LblTimeRemainingBlack.AutoSize = true;
             this.LblTimeRemainingBlack.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTimeRemainingBlack.Location = new System.Drawing.Point(151, 78);
+            this.LblTimeRemainingBlack.Location = new System.Drawing.Point(151, 122);
             this.LblTimeRemainingBlack.Name = "LblTimeRemainingBlack";
             this.LblTimeRemainingBlack.Size = new System.Drawing.Size(298, 44);
             this.LblTimeRemainingBlack.TabIndex = 3;
