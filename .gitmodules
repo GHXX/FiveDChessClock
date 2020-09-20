@@ -1,4 +1,4 @@
 [submodule "FiveDChessDataInterface"]
 	path = FiveDChessDataInterface
-	url = https://github.com/GHXX/FiveDChessDataInterface
+	url = https://github.com/GHXX/FiveDChessDataInterface.git
 	branch = master
