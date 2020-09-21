@@ -13,4 +13,5 @@ When there is no game being played currently, the times are reset to their start
 ![IngameScreenshot2](doc/img/ScreenshotMainMenu.png)
 
 As soon as one time reaches zero, it is displayed as red and the other time stops ticking down if the players continue playing.
+
 ![IngameScreenshot3](doc/img/ScreenshotTimeExpired.png)
