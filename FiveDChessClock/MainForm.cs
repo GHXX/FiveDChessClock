@@ -1,4 +1,5 @@
 ﻿using FiveDChessDataInterface;
+using FiveDChessDataInterface.Types;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -54,7 +55,8 @@ namespace FiveDChessClock
 
         private void TmrUpdate_Tick(object sender, EventArgs e)
         {
-            if (this.chessInterface.GetChessBoardAmount() > 0)
+            var state = this.chessInterface.GetCurrentGameState();
+            if (state == GameState.Running)
             {
                 if (!this.gameRunning)
                 {
@@ -73,9 +75,19 @@ namespace FiveDChessClock
                     this.lastPlayer = cp;
                 }
             }
+            else if (state != GameState.NotStarted)
+            {
+                if (this.TmrDisplayUpdate.Enabled)
+                {
+                    Console.WriteLine("Game ended!");
+                    this.TmrDisplayUpdate.Enabled = false;
+                    this.timeSinceLastTick.Reset();
+                }
+
+            }
             else if (this.gameRunning)
             {
-                Console.WriteLine("Game has ended!");
+                Console.WriteLine("Returned back to menu. Resetting times.");
                 this.gameRunning = false;
                 ResetTimes();
             }
@@ -84,8 +96,8 @@ namespace FiveDChessClock
         private void ResetTimes()
         {
             this.TmrDisplayUpdate.Enabled = false;
-            this.BtnSetTime.Enabled = true;
             this.timeSinceLastTick.Reset();
+            this.BtnSetTime.Enabled = true;
 
             this.timeRemainingBlackMs = this.timeRemainingWhiteMs = this.gameTimeMs;
             DisplayTimes();
